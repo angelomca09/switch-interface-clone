@@ -193,7 +193,7 @@ small {
 }
 
 main {
-  margin: 11rem 0;
+  margin: 10% 0;
   padding: 3rem 5%;
   display: flex;
   flex-direction: column;
@@ -211,8 +211,7 @@ main .games {
 }
 
 .game-card img {
-  height: 20rem;
-  max-height: 20rem;
+  height: 35vh;
   transition: 0.2s ease;
   border: 4px solid transparent;
 }
@@ -253,8 +252,8 @@ main .options {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 6rem;
-  height: 6rem;
+  width: 10vh;
+  height: 10vh;
   background: var(--second-bg-color);
   border-radius: 50%;
   font-size: 3rem;
