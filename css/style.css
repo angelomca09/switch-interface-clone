@@ -141,12 +141,7 @@ small {
   background-color: var(--second-bg-color);
 }
 
-.controller:nth-child(1) .led:nth-child(1) {
-  scale: 1.4;
-  background: #95f600;
-}
-
-.controller:nth-child(2) .led:nth-child(2) {
+.led.active {
   scale: 1.4;
   background: #95f600;
 }
