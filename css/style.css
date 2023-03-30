@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Mukta", sans-serif;
+}
+
+:root {
+  --text-color: #fefefe;
+  --highlight-text-color: #46aef6;
+  --bg-color: #343434;
+  --second-bg-color: #575757;
+  --shadow-effect: #181818;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+small {
+  font-size: 0.6em;
+}
+
+.header,
+.footer {
+  position: fixed;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  top: 0;
+  width: 100%;
+  font-size: 2.4rem;
+  padding: 3rem 5%;
+}
+
+.avatars-container {
+  display: inline-flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.avatar-box {
+  position: relative;
+}
+
+.avatar-box a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--second-bg-color);
+  box-shadow: 0 0 0.5rem var(--shadow-effect);
+  width: 4.5rem;
+  height: 4.5rem;
+  background: url(../images/avatar.jpeg);
+  background-size: cover;
+  outline: 0px solid var(--highlight-text-color);
+  transition: 0.1s;
+}
+
+.avatar-box span {
+  opacity: 0;
+  position: absolute;
+  bottom: -1.5rem;
+  left: -20%;
+  text-align: center;
+  color: var(--highlight-text-color);
+  white-space: nowrap;
+  font-size: 1.8rem;
+  transition: 0.2s ease;
+}
+
+.avatar-box:hover a {
+  outline-width: 4px;
+}
+
+.avatar-box:hover span {
+  opacity: 1;
+}
+
+.system-container {
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.icon-span {
+  display: grid;
+  align-items: center;
+}
+
+.footer {
+  bottom: 0;
+  width: -webkit-fill-available;
+  margin: 0rem 3%;
+  padding: 1rem 2%;
+
+  border-top: 1px solid var(--text-color);
+  font-weight: 300;
+}
+
+.controllers-container,
+.controller {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.controller {
+  gap: 0.5rem;
+}
+
+.controller-lights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.controller-lights .led {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--second-bg-color);
+}
+
+.controller:nth-child(1) .led:nth-child(1) {
+  scale: 1.4;
+  background: #95f600;
+}
+
+.controller:nth-child(2) .led:nth-child(2) {
+  scale: 1.4;
+  background: #95f600;
+}
+
+.controllers-container img {
+  height: 4rem;
+}
+
+.commands-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+  font-size: 2.3rem;
+}
+
+.command {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+  gap: 0.5rem;
+  transition: 0.2s;
+}
+
+.command:hover {
+  background: var(--second-bg-color);
+}
+
+.command:hover .btn {
+  color: var(--second-bg-color);
+}
+
+.command .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--text-color);
+  color: var(--bg-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 500;
+}
