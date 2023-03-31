@@ -10,7 +10,7 @@ function getTime() {
   });
 
   const hoursAndMinutes = time.slice(0, 5);
-  const AMPM = time.slice(5, 7);
+  const AMPM = time.slice(time.length - 2, time.length);
 
   timeElement.innerHTML = `${hoursAndMinutes}<small>${AMPM}</small>`;
 }
