@@ -211,7 +211,7 @@ main .games {
 }
 
 .game-card img {
-  height: 35vh;
+  height: 17vw;
   transition: 0.2s ease;
   border: 4px solid transparent;
 }
@@ -241,7 +241,7 @@ main .options {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 7rem;
+  margin-top: 12vh;
 }
 
 .option-card {
