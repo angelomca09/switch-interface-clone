@@ -27,7 +27,9 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
   height: 100vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -37,18 +39,15 @@ small {
 
 .header,
 .footer {
-  position: fixed;
-  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: -webkit-fill-available;
 }
 
 .header {
-  top: 0;
-  width: 100%;
-  font-size: 2.4rem;
-  padding: 3rem 5%;
+  font-size: 2rem;
+  padding: 2rem 5%;
 }
 
 .avatars-container {
@@ -79,7 +78,7 @@ small {
 .avatar-box span {
   opacity: 0;
   position: absolute;
-  bottom: -1.5rem;
+  bottom: -1.8rem;
   left: -20%;
   text-align: center;
   color: var(--highlight-text-color);
@@ -108,8 +107,6 @@ small {
 }
 
 .footer {
-  bottom: 0;
-  width: -webkit-fill-available;
   margin: 0rem 3%;
   padding: 1rem 2%;
 
@@ -154,7 +151,7 @@ small {
   display: flex;
   justify-content: flex-end;
   gap: 3rem;
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 
 .command {
@@ -193,12 +190,11 @@ small {
 }
 
 main {
-  margin: 10% 0;
-  padding: 3rem 5%;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 12vh;
+  justify-content: space-around;
+  padding: 3rem 0;
 }
 
 main .games {
@@ -302,4 +298,10 @@ main .options {
 }
 .option-card:hover span {
   opacity: 1;
+}
+
+@media (max-height: 721px) {
+  * {
+    font-size: 80%;
+  }
 }
