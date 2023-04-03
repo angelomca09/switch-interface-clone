@@ -84,3 +84,30 @@ carousel.addEventListener("mouseup", dragStop);
 carousel.addEventListener("mouseleave", dragStop);
 carousel.addEventListener("touchend", dragStop);
 //#endregion
+
+//#region Notification
+const modal = document.querySelector(".modal");
+const notification = document.querySelector(".notification");
+const closeModalButton = document.querySelector(".close-button");
+
+function closeModal() {
+  document.body.style.overflow = "auto";
+  modal.classList.remove("active");
+}
+function openModal() {
+  document.body.style.overflow = "hidden";
+  modal.classList.add("active");
+}
+
+closeModalButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  closeModal();
+});
+
+notification.addEventListener("click", (e) => {
+  e.preventDefault();
+  openModal();
+});
+//#endregion
+
+navigator.maxTouchPoints && openModal();
