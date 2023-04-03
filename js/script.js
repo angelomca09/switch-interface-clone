@@ -49,3 +49,38 @@ document.querySelectorAll(".avatar-box, .option-card").forEach((el) => {
   el.addEventListener("mouseleave", onLeaveGame);
 });
 //#endregion
+
+//#region Carousel
+const carousel = document.querySelector(".carousel");
+
+let isDragStart = false,
+  prevPageX,
+  prevScrollLeft;
+
+function dragStart(e) {
+  isDragStart = true;
+  prevPageX = e.pageX || e.touches[0].pageX;
+  prevScrollLeft = carousel.scrollLeft;
+}
+
+function dragStop() {
+  isDragStart = false;
+}
+
+function dragging(e) {
+  if (!isDragStart) return;
+  e.preventDefault();
+  let positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+  carousel.scrollLeft = prevScrollLeft - positionDiff;
+}
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("touchstart", dragStart);
+
+carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("touchmove", dragging);
+
+carousel.addEventListener("mouseup", dragStop);
+carousel.addEventListener("mouseleave", dragStop);
+carousel.addEventListener("touchend", dragStop);
+//#endregion
